@@ -1,5 +1,6 @@
 import 'package:app_notes/models/notes_model.dart';
 import 'package:app_notes/screens/add_edit_screen.dart';
+import 'package:app_notes/screens/view_note_screen.dart';
 import 'package:app_notes/services/database_helper.dart';
 import 'package:flutter/material.dart';
 
@@ -71,7 +72,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
           return GestureDetector(
             onTap: () async {
-              //await Navigator.push(context, MaterialPageRoute(builder: (context) => ViewNoteScreen(note: note),));
+              await Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ViewNoteScreen(note: note),
+                ),
+              );
 
               _loadNotes();
             },
