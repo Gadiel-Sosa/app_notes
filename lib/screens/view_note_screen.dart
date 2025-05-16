@@ -164,6 +164,7 @@ class _ViewNoteScreenState extends State<ViewNoteScreen> {
     );
     if (confirm == true) {
       await widget.databaseHelper.deleteNote(widget.note.id!);
+      // ignore: use_build_context_synchronously
       Navigator.pop(context);
     }
   }

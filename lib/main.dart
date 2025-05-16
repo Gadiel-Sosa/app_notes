@@ -12,10 +12,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      //* Oculta la etiqueta de "debug"
       debugShowCheckedModeBanner: false,
       title: 'Notes App',
       theme: ThemeData(
+        //* visualDensity ajusta automáticamente el espacio entre los
+        //*elementos según la plataforma (Android, iOS, etc.)
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        //* appBarTheme define el estilo de la barra superior de la
+        //*app (AppBar), aquí le damos un color oscuro
         appBarTheme: AppBarTheme(color: Colors.black87),
       ),
       home: HomeScreen(),
